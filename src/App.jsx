@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Nav } from './components/nav';
 
 const App = () => {
   return (
-    <div class="bg-blue-300">App</div>
+    <>
+      <Nav></Nav>
+    </>
   )
 }
 
