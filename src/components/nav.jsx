@@ -1,7 +1,7 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 export const Nav = () => {
-  const linkClass = ({ isActive }) => isActive ? 'text-blue-400 transition hover:text-gray-500/75' : 'text-gray-500 transition hover:text-gray-500/75';
+  const linkClass = ({ isActive }) => ({ color: isActive ? "text-red-300" : "text-gray-500" });
 
   return (
     <header className="bg-white">
@@ -25,22 +25,19 @@ export const Nav = () => {
           <nav aria-label="Global" className="hidden md:block">
             <ul className="flex items-center gap-6 text-sm">
               <li>
-                <NavLink
-                  className="{linkClass}"
-                  to="/about"
-                >
-                  {" "}
-                  About{" "}
+                <NavLink style={({ isActive }) => ({ color: isActive ? "red" : "black" })} className="{linkClass}ß" to="/">
+                  Home
                 </NavLink>
               </li>
               <li>
-                <a
-                  className="{linkClass}"
-                  href="#"
-                >
-                  {" "}
-                  Blog{" "}
-                </a>
+                <NavLink style={({ isActive }) => ({ color: isActive ? "red" : "black" })} className="{linkClass}ß" to="/about">
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink style={({ isActive }) => ({ color: isActive ? "red" : "black" })} className="{linkClass}ß" to="/blog">
+                  Blog
+                </NavLink>
               </li>
             </ul>
           </nav>
